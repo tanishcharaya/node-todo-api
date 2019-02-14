@@ -10,7 +10,7 @@ var token=req.header('x-auth');
     req.token=token;
     next();
   }).catch((e)=>{
-    re.status(401).send(e);
+    res.status(401).send(e);
   });
 };
 module.exports={authenticate};
